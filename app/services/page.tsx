@@ -24,7 +24,7 @@ const coreServices = [
 const whyChooseUs = [
   'Client-Centric Approach: We listen, understand, and deliver solutions that align with your business goals.',
   'Technical Excellence: Our teams bring deep expertise in emerging technologies and best practices.',
-  'Scalable Solutions: Whether you\'re growing fast or optimizing operations, we offer flexible models to suit your needs.',
+  'Scalable Solutions: Whether you&apos;re growing fast or optimizing operations, we offer flexible models to suit your needs.',
   'Commitment to Quality: We uphold high standards of quality, transparency, and accountability in everything we do.'
 ];
 
@@ -93,7 +93,7 @@ export default function Services() {
         {/* Concluding Paragraph */}
         <div className="mx-auto max-w-2xl text-center mt-24 sm:mt-32">
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            At UniLync Soft-Tech, we don't just build solutions—we build lasting partnerships. Let's connect your vision with the right technology.
+            At UniLync Soft-Tech, we don&apos;t just build solutions—we build lasting partnerships. Let&apos;s connect your vision with the right technology.
           </p>
         </div>
       </div>
