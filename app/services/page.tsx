@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const coreServices = [
   {
@@ -43,9 +44,12 @@ export default function Services() {
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {coreServices.map((service) => (
               <div key={service.name} className="group relative flex flex-col rounded-2xl overflow-hidden shadow-xl h-[400px] bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${service.imageSrc})` }}
+                {/* Using next/image for optimized background image */}
+                <Image
+                  src={service.imageSrc}
+                  alt={service.name}
+                  fill={true}
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Darker gradient overlay for better text visibility */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50" />
