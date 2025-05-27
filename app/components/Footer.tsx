@@ -1,26 +1,50 @@
 import Link from 'next/link';
 
-const itServicesList = [
-  'Cloud Computing Solutions',
-  'Cybersecurity Services',
-  'Software Development',
-  'IT Infrastructure Management',
+// Updated list to reflect new core services - now used for titles
+// const servicesList = [
+//   'IT Consultancy',
+//   'Technical Support',
+//   'Staff Augmentation',
+// ];
+
+// New lists for sub-services under each core service
+const itConsultancySubservices = [
   'Digital Transformation',
+  'Cloud Strategy',
+  'Technology Roadmap',
+  'Architecture Review',
 ];
-const consultingList = [
-  'Business Strategy',
-  'Process Optimization',
-  'Change Management',
-  'Market Analysis',
-  'Performance Improvement',
+
+const technicalSupportSubservices = [
+  'Help Desk Support',
+  'System Monitoring',
+  'Troubleshooting',
+  'Maintenance Services',
 ];
-const financeList = [
-  'Financial Planning',
-  'Investment Advisory',
-  'Risk Management',
-  'Tax Planning',
-  'Business Valuation',
+
+const staffAugmentationSubservices = [
+  'Temporary Staffing',
+  'Contract-to-Hire',
+  'Direct Placement',
+  'Talent Sourcing',
 ];
+
+// Removed consultingList and financeList
+// const consultingList = [
+//   'Business Strategy',
+//   'Process Optimization',
+//   'Change Management',
+//   'Market Analysis',
+//   'Performance Improvement',
+// ];
+// const financeList = [
+//   'Financial Planning',
+//   'Investment Advisory',
+//   'Risk Management',
+//   'Tax Planning',
+//   'Business Valuation',
+// ];
+
 const quickLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
@@ -86,9 +110,9 @@ export default function Footer() {
         {/* Service and Quick Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-gray-200">
           <div>
-            <h3 className="text-lg font-bold text-indigo-700 mb-4">IT Services</h3>
+            <h3 className="text-lg font-bold text-indigo-700 mb-4">IT Consultancy</h3>
             <ul className="space-y-2 text-gray-700 text-sm">
-              {itServicesList.map((item) => (
+              {itConsultancySubservices.map((item) => (
                 <li key={item} className="flex items-center gap-2">
                    <svg className="h-4 w-4 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.857a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l3 3a.75.75 0 001.137-.089l4.003-5.5z" clipRule="evenodd" /></svg>
                   {item}
@@ -97,9 +121,9 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold text-indigo-700 mb-4">Consulting</h3>
+            <h3 className="text-lg font-bold text-indigo-700 mb-4">Technical Support</h3>
             <ul className="space-y-2 text-gray-700 text-sm">
-              {consultingList.map((item) => (
+              {technicalSupportSubservices.map((item) => (
                 <li key={item} className="flex items-center gap-2">
                    <svg className="h-4 w-4 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.857a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l3 3a.75.75 0 001.137-.089l4.003-5.5z" clipRule="evenodd" /></svg>
                   {item}
@@ -108,11 +132,11 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-bold text-indigo-700 mb-4">Finance</h3>
+            <h3 className="text-lg font-bold text-indigo-700 mb-4">Staff Augmentation</h3>
             <ul className="space-y-2 text-gray-700 text-sm">
-              {financeList.map((item) => (
+              {staffAugmentationSubservices.map((item) => (
                 <li key={item} className="flex items-center gap-2">
-                  <svg className="h-4 w-4 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.857a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l3 3a.75.75 0 001.137-.089l4.003-5.5z" clipRule="evenodd" /></svg>
+                   <svg className="h-4 w-4 text-indigo-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.857a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l3 3a.75.75 0 001.137-.089l4.003-5.5z" clipRule="evenodd" /></svg>
                   {item}
                 </li>
               ))}

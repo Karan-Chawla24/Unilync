@@ -4,21 +4,21 @@ import Image from 'next/image';
 const coreServices = [
   {
     name: 'IT Consultancy',
-    description: 'We provide strategic IT consulting to help businesses align their technology goals with organizational objectives. From digital transformation roadmaps to cloud migration strategies, our insights enable smarter, future-ready decisions.',
-    imageSrc: '/images/consultancy.jpg',
-    link: '/services/consulting'
+    description: 'Providing expert advice and strategic planning for your technology needs.',
+    imageSrc: '/images/software_dev.jpg',
+    link: '/services/it-consultancy'
   },
   {
-    name: 'Software Development & Services',
-    description: 'Our end-to-end software development services cover everything from application design and development to testing, deployment, and support. We specialize in scalable web, mobile, and enterprise solutions across multiple industries.',
-    imageSrc: '/images/software_dev.jpg',
-    link: '/services/it'
+    name: 'Technical Support',
+    description: 'Offering reliable assistance and maintenance to ensure your systems run smoothly.',
+    imageSrc: '/images/consultancy.jpg',
+    link: '/services/technical-support'
   },
   {
     name: 'Staff Augmentation',
-    description: 'We provide skilled IT professionals on demand to help businesses scale quickly and cost-effectively. Our extensive talent network ensures you get the right expertise to meet your project requirements and timelines.',
+    description: 'Providing skilled IT professionals to supplement your team and meet project demands.',
     imageSrc: '/images/staff.jpg',
-    link: '/services/finance'
+    link: '/services/staff-augmentation'
   },
 ];
 
@@ -37,19 +37,19 @@ export default function Services() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Core Services</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            At UniLync Soft-Tech, we specialize in connecting talent with technology to drive your business forward.
+            At UniLync Soft-Tech, we offer specialized expertise in IT Consultancy, reliable Technical Support, and flexible Staff Augmentation to drive your business success.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mt-24">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {coreServices.map((service) => (
-              <div key={service.name} className="group relative flex flex-col rounded-2xl overflow-hidden shadow-xl h-[400px] bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+              <div key={service.name} className="group relative flex flex-col rounded-2xl overflow-hidden shadow-xl h-64 sm:h-72 md:h-80 lg:h-[400px] bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
                 {/* Using next/image for optimized background image */}
                 <Image
                   src={service.imageSrc}
                   alt={service.name}
                   fill={true}
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110 object-center"
                 />
                 {/* Darker gradient overlay for better text visibility */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-black/50" />
@@ -78,19 +78,37 @@ export default function Services() {
         </div>
 
         {/* Why Choose Us Section */}
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-24 sm:mt-32">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Choose UniLync?</h2>
+        <div className="relative isolate overflow-hidden mt-24 sm:mt-32">
+          {/* Background Image */}
+          <div className="absolute inset-0 h-full w-full">
+            {/* Mobile Background Image */}
+            <Image
+              src="/images/whyusmobile.jpg"
+              alt="Why Choose UniLync"
+              fill
+              className="object-cover object-top"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/70" />
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24">
-            <ul role="list" className="space-y-6 text-base leading-7 text-gray-700">
-              {whyChooseUs.map((item) => (
-                <li key={item} className="flex gap-x-3">
-                  <svg className="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" /></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
+
+          {/* Content */}
+          <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:py-32 lg:px-8 text-white min-h-[600px] flex items-center">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl drop-shadow-lg">Why Choose UniLync?</h2>
+              <div className="mt-16">
+                <ul role="list" className="space-y-6 text-base leading-7 text-gray-100">
+                  {whyChooseUs.map((item) => (
+                    <li key={item} className="flex gap-x-3 items-start">
+                      <svg className="h-6 w-5 flex-none text-indigo-400 mt-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                      </svg>
+                      <span className="drop-shadow-md">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 

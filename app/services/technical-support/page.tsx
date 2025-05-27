@@ -1,72 +1,60 @@
 const services = [
   {
-    name: 'Financial Planning',
-    description: 'Develop a comprehensive financial plan for your business with our expert guidance. We help you make informed financial decisions.',
+    name: 'Comprehensive Troubleshooting',
+    description: 'Diagnosing and resolving hardware and software issues efficiently to minimize downtime.',
     features: [
-      'Budget Planning',
-      'Cash Flow Management',
-      'Financial Forecasting',
-      'Capital Planning',
-      'Financial Strategy',
+      'Desktop and Laptop Support',
+      'Software Installation and Configuration',
+      'Network Connectivity Troubleshooting',
+      'Peripheral Device Support',
+      'Error Diagnosis and Resolution',
     ],
   },
   {
-    name: 'Investment Advisory',
-    description: 'Make smart investment decisions with our expert advisory services. We help you maximize returns while managing risk.',
+    name: 'System Maintenance and Monitoring',
+    description: 'Proactive monitoring and routine maintenance to prevent issues and ensure optimal system performance and security.',
     features: [
-      'Portfolio Management',
-      'Risk Assessment',
-      'Investment Strategy',
-      'Asset Allocation',
-      'Performance Analysis',
+      'Regular System Health Checks',
+      'Performance Monitoring and Optimization',
+      'Security Patch Management',
+      'Antivirus and Malware Protection',
+      'Data Backup and Recovery Verification',
     ],
   },
   {
-    name: 'Risk Management',
-    description: 'Protect your business with our comprehensive risk management solutions. We help you identify and mitigate financial risks.',
+    name: 'User Support and Training',
+    description: 'Providing timely and friendly assistance to end-users, empowering them to work effectively and efficiently.',
     features: [
-      'Risk Assessment',
-      'Risk Mitigation',
-      'Insurance Planning',
-      'Compliance Management',
-      'Crisis Management',
+      'Help Desk Support (Remote and On-site)',
+      'Software Usage Guidance',
+      'Account and Password Management',
+      'Basic IT Security Awareness Training',
+      'Onboarding and Offboarding Support',
     ],
   },
   {
-    name: 'Tax Planning',
-    description: 'Optimize your tax strategy with our expert tax planning services. We help you minimize tax liability while ensuring compliance.',
+    name: 'IT Technical Support for Organizations/Projects',
+    description: 'Providing dedicated technical assistance and support tailored to the specific needs of your organization or ongoing projects.',
     features: [
-      'Tax Strategy',
-      'Tax Compliance',
-      'Tax Optimization',
-      'International Tax',
-      'Tax Reporting',
-    ],
-  },
-  {
-    name: 'Business Valuation',
-    description: 'Understand your business value with our comprehensive valuation services. We provide accurate and detailed business assessments.',
-    features: [
-      'Business Assessment',
-      'Market Valuation',
-      'Asset Valuation',
-      'Merger & Acquisition',
-      'Due Diligence',
+      'Project-Specific Support',
+      'Organizational IT Troubleshooting',
+      'Infrastructure Support for Projects',
+      'Integration Assistance',
+      'Dedicated Support Teams',
     ],
   },
 ];
 
-export default function FinanceServices() {
+export default function TechnicalSupport() {
   return (
     <div className="bg-white">
       {/* Hero section */}
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Financial Services</h2>
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Technical Support Services</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Achieve financial success with our comprehensive financial services. We provide expert guidance
-              and solutions to help you manage and grow your business finances.
+              We provide reliable and comprehensive technical support, from resolving individual user issues and maintaining systems to offering dedicated support for your organization&apos;s projects and infrastructure.
             </p>
           </div>
         </div>
@@ -75,9 +63,9 @@ export default function FinanceServices() {
       {/* Services section */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Financial Solutions</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Technical Support Offerings</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Choose from our range of financial services designed to help your business thrive.
+            We provide a comprehensive suite of technical support solutions tailored to the needs of your business.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

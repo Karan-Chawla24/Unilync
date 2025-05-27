@@ -68,7 +68,7 @@ export default function Home() {
               Bridging the gap between talent and technology
             </h1>
             <p className="mt-6 text-base sm:text-xl md:text-2xl leading-8 text-white/90 max-w-full px-4 drop-shadow">
-              We provide comprehensive IT, consulting, and financial services to help your business thrive in the digital age.
+              We provide comprehensive IT consultancy, Technical support, and staff augmentation to help your business thrive in the digital age.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-3 sm:gap-x-6">
               <Link

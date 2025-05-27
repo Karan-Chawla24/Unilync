@@ -1,49 +1,34 @@
 import Image from 'next/image';
 
-const directors = [
-  {
-    name: 'John Smith',
-    role: 'Chief Executive Officer',
-    imageUrl: '/images/person.jpg',
-    bio: 'John has over 20 years of experience in the technology industry, leading successful companies through digital transformation.',
-  },
-  {
-    name: 'Sarah Johnson',
-    role: 'Chief Technology Officer',
-    imageUrl: '/images/person.jpg',
-    bio: 'Sarah is a technology visionary with expertise in cloud computing and artificial intelligence.',
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Chief Financial Officer',
-    imageUrl: '/images/person.jpg',
-    bio: 'Michael brings extensive experience in financial management and strategic planning.',
-  },
-];
+// Removed directors data as it's moved to Our Partners page
+// const directors = [...];
 
 export default function About() {
   return (
     <div className="bg-white">
       {/* Hero section */}
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">About Us</h2>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                UniLync Soft-Tech Private Limited is a next-generation IT solutions provider, founded in 2025 on the principle of &apos;Bridging Talents with Technologies&apos;, dedicated to empowering businesses through innovative technologies, strategic consulting, and expert talent solutions. Headquartered in Gurugram Haryana, UniLync Soft-Tech specializes in IT consultancy, end-to-end software services, and staff augmentation where, we provide a wide pool of talents to connect with right clients tailored to meet the dynamic demands of today&apos;s digital ecosystem.
-                At UniLync Soft-Tech, we bridge the gap between business needs and technologies by delivering customized solutions that drive efficiency, scalability, and innovation. Whether you&apos;re a startup looking for rapid development or an enterprise seeking strategic digital transformation, our team of seasoned professionals ensures optimal results through deep domain expertise and a client-first approach.
-              </p>
-            </div>
-            <div className="relative h-[600px] rounded-2xl overflow-hidden bg-gradient-to-b from-indigo-100/20">
-              <Image
-                src="/images/about.jpg"
-                alt="About UniLync Soft-Tech"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+        {/* Background Image */}
+        <div className="absolute inset-0 h-full w-full">
+          <Image
+            src="/images/about.jpg"
+            alt="About UniLync Soft-Tech"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+
+        {/* Text Content */}
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:py-32 lg:px-8 text-center text-white min-h-[600px] flex items-center">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-4xl font-bold tracking-tight sm:text-6xl drop-shadow-lg">About Us</h2>
+            <p className="mt-6 text-lg leading-8 drop-shadow-md">
+              UniLync Soft-Tech Private Limited is a next-generation IT solutions provider, founded in 2025 on the principle of &apos;Bridging Talents with Technologies&apos;, dedicated to empowering businesses through innovative technologies, strategic consulting, and expert talent solutions. Headquartered in Gurugram Haryana, UniLync Soft-Tech specializes in IT consultancy, end-to-end software services, and staff augmentation where, we provide a wide pool of talents to connect with right clients tailored to meet the dynamic demands of today&apos;s digital ecosystem.
+              At UniLync Soft-Tech, we bridge the gap between business needs and technologies by delivering customized solutions that drive efficiency, scalability, and innovation. Whether you&apos;re a startup looking for rapid development or an enterprise seeking strategic digital transformation, our team of seasoned professionals ensures optimal results through deep domain expertise and a client-first approach.
+            </p>
           </div>
         </div>
       </div>
@@ -94,34 +79,8 @@ export default function About() {
         </div>
       </div>
 
-      {/* Team section */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Leadership Team</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Meet the experienced professionals who lead our company.
-          </p>
-        </div>
-        <ul
-          role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
-        >
-          {directors.map((director) => (
-            <li key={director.name}>
-              <Image
-                className="aspect-[3/2] w-full rounded-2xl object-cover"
-                src={director.imageUrl}
-                alt={director.name}
-                width={500}
-                height={300}
-              />
-              <h3 className="mt-6 text-lg font-semibold leading-8 text-gray-900">{director.name}</h3>
-              <p className="text-base leading-7 text-indigo-600">{director.role}</p>
-              <p className="mt-4 text-base leading-7 text-gray-600">{director.bio}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {/* Team section - Removed as it's moved to Our Partners page */}
+      {/* <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">...</div> */}
     </div>
   );
 } 

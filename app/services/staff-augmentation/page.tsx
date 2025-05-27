@@ -1,72 +1,46 @@
 const services = [
   {
-    name: 'Cloud Computing Solutions',
-    description: 'Migrate to the cloud with our comprehensive cloud computing services. We help you choose the right cloud platform and ensure a smooth transition.',
+    name: 'Flexible Staffing Models',
+    description: 'Offering various engagement models including temporary, contract-to-hire, and direct placement to fit your needs.',
     features: [
-      'Cloud Migration Strategy',
-      'Infrastructure as a Service (IaaS)',
-      'Platform as a Service (PaaS)',
-      'Software as a Service (SaaS)',
-      'Cloud Security',
+      'Temporary Staffing',
+      'Contract-to-Hire',
+      'Direct Placement',
+      'Project-Based Staffing',
     ],
   },
   {
-    name: 'Cybersecurity Services',
-    description: 'Protect your business with our advanced cybersecurity solutions. We implement robust security measures to safeguard your data and systems.',
+    name: 'Access to Skilled Professionals',
+    description: 'Providing access to a wide pool of pre-vetted IT professionals with diverse skill sets and experience.',
     features: [
-      'Security Assessment',
-      'Threat Detection',
-      'Vulnerability Management',
-      'Security Monitoring',
-      'Incident Response',
+      'Expert IT Talent',
+      'Specialized Skills',
+      'Industry Experience',
+      'Rapid Placement',
     ],
   },
   {
-    name: 'Software Development',
-    description: 'Custom software solutions tailored to your business needs. Our expert developers create scalable and maintainable applications.',
+    name: 'Scalable Workforce Solutions',
+    description: 'Quickly scale your team up or down based on project requirements and business fluctuations.',
     features: [
-      'Custom Application Development',
-      'Web Development',
-      'Mobile App Development',
-      'API Development',
-      'Legacy System Modernization',
-    ],
-  },
-  {
-    name: 'IT Infrastructure Management',
-    description: 'Optimize your IT infrastructure with our comprehensive management services. We ensure your systems run efficiently and reliably.',
-    features: [
-      'Network Management',
-      'Server Management',
-      'Storage Solutions',
-      'Disaster Recovery',
-      'Performance Optimization',
-    ],
-  },
-  {
-    name: 'Digital Transformation',
-    description: 'Transform your business with our digital solutions. We help you leverage technology to improve operations and customer experience.',
-    features: [
-      'Digital Strategy',
-      'Process Automation',
-      'Customer Experience',
-      'Data Analytics',
-      'Business Intelligence',
+      'Rapid Scaling',
+      'Resource Flexibility',
+      'Cost Efficiency',
+      'Reduced Hiring Overhead',
     ],
   },
 ];
 
-export default function ITServices() {
+export default function StaffAugmentation() {
   return (
     <div className="bg-white">
       {/* Hero section */}
       <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-14">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">IT Services</h2>
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Staff Augmentation</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Transform your business with our comprehensive IT solutions. We combine cutting-edge technology
-              with expert knowledge to deliver exceptional results.
+              Bridge your talent gaps and scale your team efficiently with our expert staff augmentation services.
             </p>
           </div>
         </div>
@@ -75,9 +49,9 @@ export default function ITServices() {
       {/* Services section */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our IT Solutions</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Staff Augmentation Solutions</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Choose from our range of IT services designed to help your business thrive in the digital age.
+            Find the right IT professionals to integrate seamlessly with your existing team and achieve your project goals.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

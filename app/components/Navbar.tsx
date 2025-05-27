@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
@@ -9,11 +10,13 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
+  { name: 'Our Partners', href: '/our-partners' },
   { name: 'Contact', href: '/contact' },
 ];  
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="bg-white shadow-sm fixed w-full z-50">
@@ -45,7 +48,12 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition-colors"
+              className={
+                `text-base font-semibold leading-6 transition-colors ${pathname === item.href
+                  ? 'text-indigo-600 underline'
+                  : 'text-gray-900 hover:text-indigo-600'
+                }`
+              }
             >
               {item.name}
             </Link>
@@ -77,7 +85,12 @@ export default function Navbar() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className={
+                        `-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold leading-7 transition-colors ${pathname === item.href
+                          ? 'text-indigo-600 bg-gray-100'
+                          : 'text-gray-900 hover:bg-gray-50'
+                        }`
+                      }
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

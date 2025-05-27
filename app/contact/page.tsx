@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -40,18 +41,32 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32 min-h-screen flex items-center justify-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 h-full w-full">
+        <Image
+          src="/images/contactus.jpg"
+          alt="Contact Us Background"
+          fill
+          className="object-cover object-top"
+          priority
+        />
+        {/* Overlay for text readability */}
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
+
+      {/* Content Container */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-white">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Us</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl drop-shadow-lg">Contact Us</h2>
+          <p className="mt-6 text-lg leading-8 drop-shadow-md">
             Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div className="sm:col-span-2">
-              <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
+              <label htmlFor="name" className="block text-sm font-semibold leading-6 text-white drop-shadow">
                 Name
               </label>
               <div className="mt-2.5">
@@ -67,7 +82,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="sm:col-span-2">
-              <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+              <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white drop-shadow">
                 Email
               </label>
               <div className="mt-2.5">
@@ -83,7 +98,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="sm:col-span-2">
-              <label htmlFor="phone" className="block text-sm font-semibold leading-6 text-gray-900">
+              <label htmlFor="phone" className="block text-sm font-semibold leading-6 text-white drop-shadow">
                 Phone number
               </label>
               <div className="mt-2.5">
@@ -98,7 +113,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="sm:col-span-2">
-              <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+              <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white drop-shadow">
                 Message
               </label>
               <div className="mt-2.5">
@@ -123,23 +138,23 @@ export default function Contact() {
             </button>
           </div>
         </form>
-
-        {/* Success Popup */}
-        {showSuccessPopup && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
-            <div className="relative w-full max-w-md p-8 bg-white rounded-lg shadow-xl text-center">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-600 mb-6">Thank you for contacting us. We will get back to you shortly.</p>
-              <button
-                onClick={() => setShowSuccessPopup(false)}
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Success Popup */}
+      {showSuccessPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+          <div className="relative w-full max-w-md p-8 bg-white rounded-lg shadow-xl text-center">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Message Sent Successfully!</h3>
+            <p className="text-gray-600 mb-6">Thank you for contacting us. We will get back to you shortly.</p>
+            <button
+              onClick={() => setShowSuccessPopup(false)}
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 } 
