@@ -4,16 +4,17 @@ import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 
 const sliderImages = [
-  { src: '/images/engg.jpg', alt: 'consulting' },
-  { src: '/images/code1.jpg', alt: 'IT Service' },  
-  { src: '/images/code2.jpg', alt: 'IT Service' },
-  { src: '/images/code3.jpg', alt: 'IT Service' },
- 
+  { src: '/images/engg.jpg', alt: 'Engineering Services' },
+  { src: '/images/code1.jpg', alt: 'IT Services' },  
+  { src: '/images/code2.jpg', alt: 'IT Solutions' },
+  { src: '/images/code3.jpg', alt: 'Technology Services' },
 ];
 
 export default function Home() {
   const [current, setCurrent] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedImages, setLoadedImages] = useState<number[]>([]);
 
   useEffect(() => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -22,6 +23,11 @@ export default function Home() {
     }, 3000);
     return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
   }, [current]);
+
+  const handleImageLoad = (index: number) => {
+    setLoadedImages(prev => [...prev, index]);
+    if (index === 0) setIsLoading(false);
+  };
 
   return (
     <div className="bg-white">
@@ -33,20 +39,32 @@ export default function Home() {
             className="flex transition-transform duration-700 ease-in-out h-full"
             style={{ transform: `translateX(-${current * 100}%)` }}
           >
-            {sliderImages.map((img,key) => (
-              <div key={key} className="min-w-full h-full bg-gray-100 flex items-center justify-center">
+            {sliderImages.map((img, index) => (
+              <div key={index} className="min-w-full h-full bg-gray-100 flex items-center justify-center relative">
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  width={1920}
-                  height={700}
-                  className="object-cover w-full h-full"
-                  priority={img.src === sliderImages[0].src}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                  onLoad={() => handleImageLoad(index)}
                   sizes="100vw"
+                  quality={100}
                 />
+                {!loadedImages.includes(index) && (
+                  <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
+          {/* Loading state for initial load */}
+          {isLoading && (
+            <div className="absolute inset-0 bg-gray-100 flex items-center justify-center z-40">
+              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-600"></div>
+            </div>
+          )}
           {/* Strong dark overlay for text readability */}
           <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none" />
           {/* Overlay gradient for better text readability */}
