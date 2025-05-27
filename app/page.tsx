@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero section with full-width image slider background */}
-      <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+      <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20 pt-24 sm:pt-32 lg:pt-0">
         {/* Full-width image slider */}
         <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
           <div
@@ -64,20 +64,20 @@ export default function Home() {
           </div>
           {/* Overlayed hero text */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-30">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white drop-shadow-lg">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white drop-shadow-lg mt-10">
               Bridging the gap between talent and technology
             </h1>
-            <p className="mt-6 text-lg sm:text-xl md:text-2xl leading-8 text-white/90 max-w-2xl drop-shadow">
+            <p className="mt-6 text-base sm:text-xl md:text-2xl leading-8 text-white/90 max-w-full px-4 drop-shadow">
               We provide comprehensive IT, consulting, and financial services to help your business thrive in the digital age.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-x-6">
+            <div className="mt-10 flex flex-col sm:flex-row items-center gap-3 sm:gap-x-6">
               <Link
                 href="/contact"
-                className="rounded-md bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
               </Link>
-              <Link href="/services" className="text-base font-semibold leading-6 text-white hover:underline">
+              <Link href="/services" className="text-sm font-semibold leading-6 text-white hover:underline">
                 Learn more <span aria-hidden="true">→</span>
               </Link>
             </div>
