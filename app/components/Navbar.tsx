@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1 items-center">
           <Link href="/" className="p-1 flex items-center gap-2">
             <Image
-              src="/images/logo1.jpg"
+              src="/images/logo.jpg"
               alt="UniLync Logo"
               width={160}
               height={48}

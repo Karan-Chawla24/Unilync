@@ -52,7 +52,7 @@ export default function About() {
       <div className="relative isolate overflow-hidden py-24 sm:py-32">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(/images/values.jpg)` }}
+          style={{ backgroundImage: `url(/images/our_values.jpg)` }}
         />
         {/* Overlay for text readability */}
         <div className="absolute inset-0 bg-black/60" />
