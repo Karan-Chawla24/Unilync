@@ -33,7 +33,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function DirectorDetail({ params }: { params: { directorNameSlug: string } }) {
+type Props = {
+  params: {
+    directorNameSlug: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default function DirectorDetail({ params }: Props) {
   const { directorNameSlug } = params;
 
   // Find the director based on the slug
