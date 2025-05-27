@@ -3,22 +3,22 @@ import Link from 'next/link';
 
 const directors = [
   {
-    name: 'John Smith',
+    name: 'Anju Thakur',
     role: 'Chief Executive Officer',
     imageUrl: '/images/person.jpg',
-    bio: 'John has over 20 years of experience in the technology industry, leading successful companies through digital transformation.',
+    bio: 'Results-driven IT Services and Consulting professional with over 3 years of experience, currently engaged with UniLync Soft-Tech Pvt. Ltd., working independently in dual roles as a Technical Account Specialist (TAS) and Business Development Executive (BDE). I specialize in aligning business needs with tailored IT solutions, managing client relationships, and driving strategic growth in competitive markets.',
   },
   {
-    name: 'Sarah Johnson',
+    name: 'Devanshi Jhamb',
     role: 'Chief Technology Officer',
     imageUrl: '/images/person.jpg',
-    bio: 'Sarah is a technology visionary with expertise in cloud computing and artificial intelligence.',
+    bio: 'Experienced IT Recruitment & Client Relationship Professional | US IT Staffing | BDM | Talent Acquisition | Resource Management. With over 5 years of progressive experience in the IT recruitment and staffing industry, I bring a comprehensive skill set spanning Client Relationship Management, Business Development, Resource Management, and End-to-End IT Recruitment—both in domestic and US markets.',
   },
   {
-    name: 'Michael Chen',
+    name: 'Sheenam Taneja',
     role: 'Chief Financial Officer',
     imageUrl: '/images/person.jpg',
-    bio: 'Michael brings extensive experience in financial management and strategic planning.',
+    bio: 'IT Project Manager | Team Lead | Technical Recruitment Specialist | Client Relationship & Resource Management | B.Tech in Computer Science | 10+ Years. With over a decade of experience in the IT industry, I bring a unique blend of Project Management, Technical Recruitment, and Client Relationship expertise.',
   },
 ];
 
