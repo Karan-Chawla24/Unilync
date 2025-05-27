@@ -40,7 +40,7 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export default function DirectorDetail({ params }: Props) {
+export default async function DirectorDetail({ params }: Props) {
   const { directorNameSlug } = params;
 
   // Find the director based on the slug
