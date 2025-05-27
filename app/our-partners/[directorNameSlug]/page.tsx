@@ -33,15 +33,15 @@ export async function generateStaticParams() {
   }));
 }
 
-type Props = {
-  params: {
+interface PageProps {
+  params: Promise<{
     directorNameSlug: string;
-  };
+  }>;
   searchParams: { [key: string]: string | string[] | undefined };
-};
+}
 
-export default async function DirectorDetail({ params }: Props) {
-  const { directorNameSlug } = params;
+export default async function DirectorDetail({ params }: PageProps) {
+  const { directorNameSlug } = await params;
 
   // Find the director based on the slug
   const director = directors.find(
