@@ -37,7 +37,6 @@ interface PageProps {
   params: Promise<{
     directorNameSlug: string;
   }>;
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
 export default async function DirectorDetail({ params }: PageProps) {
