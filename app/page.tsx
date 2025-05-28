@@ -83,10 +83,10 @@ export default function Home() {
           {/* Overlayed hero text */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-30">
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white drop-shadow-lg mt-10">
-              Bridging the gap between talent and technology
+            Bridging the Gap between Talents and Technologies
             </h1>
             <p className="mt-6 text-base sm:text-xl md:text-2xl leading-8 text-white/90 max-w-full px-4 drop-shadow">
-              We provide comprehensive IT consultancy, Technical support, and staff augmentation to help your business thrive in the digital age.
+            We deliver end-to-end IT consultancy, technical support, and staff augmentation services to empower your business in the digital era.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-3 sm:gap-x-6">
               <Link

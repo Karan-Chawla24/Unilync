@@ -26,30 +26,15 @@ const staffAugmentationSubservices = [
   'Temporary Staffing',
   'Contract-to-Hire',
   'Direct Placement',
-  'Talent Sourcing',
+  'Talent Outsourcing',
 ];
-
-// Removed consultingList and financeList
-// const consultingList = [
-//   'Business Strategy',
-//   'Process Optimization',
-//   'Change Management',
-//   'Market Analysis',
-//   'Performance Improvement',
-// ];
-// const financeList = [
-//   'Financial Planning',
-//   'Investment Advisory',
-//   'Risk Management',
-//   'Tax Planning',
-//   'Business Valuation',
-// ];
 
 const quickLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
   { name: 'Services', href: '/services' },
+  { name: 'Our Partners', href: '/our-partners' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 const socialLinks = [

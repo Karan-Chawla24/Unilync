@@ -35,9 +35,9 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Core Services Section */}
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Core Services</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mt-10">Our Core Services</h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            At UniLync Soft-Tech, we offer specialized expertise in IT Consultancy, reliable Technical Support, and flexible Staff Augmentation to drive your business success.
+            At UniLync Soft-Tech, With deep expertise in IT consultancy, reliable technical support, and agile staff augmentation, we help your business achieve lasting success.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-7xl sm:mt-20 lg:mt-24">
@@ -58,7 +58,7 @@ export default function Services() {
                     <dt className="text-2xl font-bold leading-7 mb-4 text-white drop-shadow-lg">
                       {service.name}
                     </dt>
-                    <dd className="text-base leading-7 text-gray-100 drop-shadow-md">
+                    <dd className="text-sm leading-relaxed text-gray-100 drop-shadow-md text-justify">
                       {service.description}
                     </dd>
                   </div>

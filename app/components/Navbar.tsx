@@ -8,8 +8,8 @@ import Image from 'next/image';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
   { name: 'Our Partners', href: '/our-partners' },
   { name: 'Contact', href: '/contact' },
 ];  
