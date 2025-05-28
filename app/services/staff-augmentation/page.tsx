@@ -7,6 +7,7 @@ const services = [
       'Contract-to-Hire',
       'Direct Placement',
       'Project-Based Staffing',
+      'Talent Outsourcing'
     ],
   },
   {
