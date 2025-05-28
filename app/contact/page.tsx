@@ -58,7 +58,7 @@ export default function Contact() {
       {/* Content Container */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-white">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl drop-shadow-lg">Contact Us</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl drop-shadow-lg mt-10">Contact Us</h2>
           <p className="mt-6 text-lg leading-8 drop-shadow-md">
             Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
