@@ -25,7 +25,7 @@ const coreServices = [
 const whyChooseUs = [
   'Client-Centric Approach: We listen, understand, and deliver solutions that align with your business goals.',
   'Technical Excellence: Our teams bring deep expertise in emerging technologies and best practices.',
-  'Scalable Solutions: Whether you&apos;re growing fast or optimizing operations, we offer flexible models to suit your needs.',
+  'Scalable Solutions: Whether you are growing fast or optimizing operations, we offer flexible models to suit your needs.',
   'Commitment to Quality: We uphold high standards of quality, transparency, and accountability in everything we do.'
 ];
 

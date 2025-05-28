@@ -4,26 +4,26 @@ import Link from 'next/link';
 const directors = [
   {
     name: 'Devanshi Jhamb',
-    role: 'Founder & CEO',
-    imageUrl: '/images/Devanshi.jpg',
+    role: 'Co-Founder & CEO',
+    imageUrl: '/images/Devanshi.png',
     bio: 'IT staffing expert with 5+ years in US recruitment, client handling, BDM, and strategic talent acquisition.',
   },
   {
     name: 'Dikshant Nagpal',
-    role: 'Founder & CFO',
-    imageUrl: '/images/Dikshant.jpg',
+    role: 'Co-Founder & CFO',
+    imageUrl: '/images/Dikshant.png',
     bio: 'CA with 6+ yrs experience, FAFD certified, expert in audit, risk, tax, and virtual CFO services for IT and tech firms.',
   },
   {
     name: 'Sheenam Taneja',
     role: 'Project Manager',
-    imageUrl: '/images/person.jpg',
+    imageUrl: '/images/Sheenam.png',
     bio: 'IT Project Manager with 10+ years experience in project delivery, technical recruitment, and client management.',
   },
   {
     name: 'Anju Thakur',
     role: 'Talent Acquisition Specialist',
-    imageUrl: '/images/Anju.jpg',
+    imageUrl: '/images/Anju.png',
     bio: 'IT professional with 3+ years at UniLync Soft-Tech, skilled in client management, tech advisory, and business growth.',
   },
 ];
@@ -44,9 +44,9 @@ export default function OurPartners() {
           className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-4"
         >
           {directors.map((director) => (
-            <li key={director.name} className="relative rounded-2xl overflow-hidden shadow-lg group text-center">
+            <li key={director.name} className="relative rounded-2xl overflow-hidden shadow group text-center">
               {/* Image container with hover effect for bio */}
-              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl">
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl bg-[#E2DBD0]">
                 <Image
                   className="object-contain w-full h-full"
                   src={director.imageUrl}
