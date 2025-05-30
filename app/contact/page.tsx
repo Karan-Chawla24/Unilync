@@ -41,7 +41,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="relative isolate overflow-hidden bg-white py-24 sm:py-32 min-h-screen flex items-center justify-center">
+    <div className="relative isolate overflow-hidden bg-white py-16 sm:py-20 flex items-center justify-center mt-5">
       {/* Background Image */}
       <div className="absolute inset-0 h-full w-full">
         <Image
@@ -58,13 +58,13 @@ export default function Contact() {
       {/* Content Container */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 text-white">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl drop-shadow-lg mt-10">Contact Us</h2>
-          <p className="mt-6 text-lg leading-8 drop-shadow-md">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl drop-shadow-lg mt-5">Contact Us</h2>
+          <p className="mt-3 text-lg leading-8 drop-shadow-md">
             Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+        <form onSubmit={handleSubmit} className="mx-auto mt-8 max-w-xl sm:mt-10">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
             <div className="sm:col-span-2">
               <label htmlFor="name" className="block text-sm font-semibold leading-6 text-white drop-shadow">
                 Name
@@ -77,7 +77,7 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 [&:-webkit-autofill]:!text-white [&:-webkit-autofill]:!bg-transparent [&:-webkit-autofill]:!shadow-none"
                 />
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 [&:-webkit-autofill]:!text-white [&:-webkit-autofill]:!bg-transparent [&:-webkit-autofill]:!shadow-none"
                 />
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function Contact() {
                   id="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 [&:-webkit-autofill]:!text-white [&:-webkit-autofill]:!bg-transparent [&:-webkit-autofill]:!shadow-none"
                 />
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 [&:-webkit-autofill]:!text-white [&:-webkit-autofill]:!bg-transparent [&:-webkit-autofill]:!shadow-none"
                 />
               </div>
             </div>

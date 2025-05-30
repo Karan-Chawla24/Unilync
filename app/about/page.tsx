@@ -78,9 +78,6 @@ export default function About() {
           </div>
         </div>
       </div>
-
-      {/* Team section - Removed as it's moved to Our Partners page */}
-      {/* <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-32">...</div> */}
     </div>
   );
 } 
