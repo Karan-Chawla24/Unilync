@@ -197,9 +197,4 @@ export default function Contact() {
       )}
     </div>
   );
-}
-
-export const metadata = {
-  title: 'Contact Unilync Soft-tech - Get in Touch',
-  description: 'Contact Unilync Soft-tech for inquiries about our IT, Consulting, and Financial services. We are here to help your business.',
-}; 
+} 
