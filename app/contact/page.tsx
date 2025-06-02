@@ -106,7 +106,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
             <div className="sm:col-span-2">
               <label htmlFor="name" className="block text-sm font-semibold leading-6 text-white drop-shadow">
-                Name
+                Name <span className="text-red-500">*</span>
               </label>
               <div className="mt-2.5">
                 <input
@@ -116,13 +116,13 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 [&:-webkit-autofill]:!text-white [&:-webkit-autofill]:!bg-transparent [&:-webkit-autofill]:!shadow-none"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 autofill:!text-white autofill:!bg-transparent autofill:!shadow-none"
                 />
               </div>
             </div>
             <div className="sm:col-span-2">
               <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white drop-shadow">
-                Email
+                Email <span className="text-red-500">*</span>
               </label>
               <div className="mt-2.5">
                 <input
@@ -132,28 +132,29 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 [&:-webkit-autofill]:!text-white [&:-webkit-autofill]:!bg-transparent [&:-webkit-autofill]:!shadow-none"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 autofill:!text-white autofill:!bg-transparent autofill:!shadow-none"
                 />
               </div>
             </div>
             <div className="sm:col-span-2">
               <label htmlFor="phone" className="block text-sm font-semibold leading-6 text-white drop-shadow">
-                Phone number
+                Phone number <span className="text-red-500">*</span>
               </label>
               <div className="mt-2.5">
                 <input
                   type="tel"
                   name="phone"
                   id="phone"
+                  required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 [&:-webkit-autofill]:!text-white [&:-webkit-autofill]:!bg-transparent [&:-webkit-autofill]:!shadow-none"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 autofill:!text-white autofill:!bg-transparent autofill:!shadow-none"
                 />
               </div>
             </div>
             <div className="sm:col-span-2">
               <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white drop-shadow">
-                Message
+                Message <span className="text-red-500">*</span>
               </label>
               <div className="mt-2.5">
                 <textarea
@@ -163,7 +164,7 @@ export default function Contact() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 [&:-webkit-autofill]:!text-white [&:-webkit-autofill]:!bg-transparent [&:-webkit-autofill]:!shadow-none"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 autofill:!text-white autofill:!bg-transparent autofill:!shadow-none"
                 />
               </div>
             </div>

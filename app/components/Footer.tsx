@@ -1,11 +1,5 @@
 import Link from 'next/link';
 
-// Updated list to reflect new core services - now used for titles
-// const servicesList = [
-//   'IT Consultancy',
-//   'Technical Support',
-//   'Staff Augmentation',
-// ];
 
 // New lists for sub-services under each core service
 const itConsultancySubservices = [
@@ -16,7 +10,7 @@ const itConsultancySubservices = [
 ];
 
 const technicalSupportSubservices = [
-  'Help Desk Support',
+  'Project-Specific Support',
   'System Monitoring',
   'Troubleshooting',
   'Maintenance Services',
