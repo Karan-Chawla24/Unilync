@@ -121,4 +121,9 @@ export default function Services() {
       </div>
     </div>
   );
-} 
+}
+
+export const metadata = {
+  title: 'Unilync Soft-tech - Our Services in IT, Consulting, and Finance',
+  description: 'Explore the comprehensive IT, Consulting, and Financial services offered by Unilync Soft-tech. Find the solutions your business needs.',
+}; 

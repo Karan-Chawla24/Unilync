@@ -73,4 +73,9 @@ export default function OurPartners() {
       </div>
     </div>
   );
-} 
+}
+
+export const metadata = {
+  title: 'Unilync Soft-tech - Our Valued Partners',
+  description: 'Discover the partners who collaborate with Unilync Soft-tech to deliver exceptional IT, Consulting, and Financial solutions.',
+}; 

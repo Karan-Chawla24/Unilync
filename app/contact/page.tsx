@@ -12,26 +12,65 @@ export default function Contact() {
   });
 
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateEmail = (email: string) => {
+    return email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+  };
+
+  const validatePhone = (phone: string) => {
+    return phone.match(/^\+?[\d\s-]{10,}$/);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    const response = await fetch('https://formspree.io/f/xwpodyzd', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    // Input validation
+    if (!formData.name.trim()) {
+      alert('Please enter your name');
+      setIsSubmitting(false);
+      return;
+    }
 
-    if (response.ok) {
-      // Clear form fields
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      // Show success message popup
-      setShowSuccessPopup(true);
-    } else {
-      // Handle errors (e.g., show an error message)
+    if (!validateEmail(formData.email)) {
+      alert('Please enter a valid email address');
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (formData.phone && !validatePhone(formData.phone)) {
+      alert('Please enter a valid phone number');
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!formData.message.trim()) {
+      alert('Please enter your message');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch('https://formspree.io/f/xwpodyzd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        setShowSuccessPopup(true);
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (e) {
+      console.error('Error sending message:', e);
       alert('There was an error sending your message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -132,9 +171,10 @@ export default function Contact() {
           <div className="mt-10">
             <button
               type="submit"
+              disabled={isSubmitting}
               className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Send message
+              {isSubmitting ? 'Sending...' : 'Send message'}
             </button>
           </div>
         </form>
@@ -157,4 +197,9 @@ export default function Contact() {
       )}
     </div>
   );
-} 
+}
+
+export const metadata = {
+  title: 'Contact Unilync Soft-tech - Get in Touch',
+  description: 'Contact Unilync Soft-tech for inquiries about our IT, Consulting, and Financial services. We are here to help your business.',
+}; 

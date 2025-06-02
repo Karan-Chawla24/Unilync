@@ -80,4 +80,9 @@ export default function About() {
       </div>
     </div>
   );
-} 
+}
+
+export const metadata = {
+  title: 'About Unilync Soft-tech - Your Partner in IT and Consulting',
+  description: 'Learn more about Unilync Soft-tech, a leading provider of IT, Consulting, and Financial services. Discover our mission, values, and team.',
+}; 
